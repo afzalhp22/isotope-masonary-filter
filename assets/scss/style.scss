@@ -1,0 +1,131 @@
+/**
+ * @Main scss for (Template/Project Name)
+ * @project     - Project Name
+ * @author      - 
+ * @created_by  - kawsar bin siraj
+ * @created_at  - 
+ * @modified_by -
+ */
+
+
+/* fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+// font-family: 'Mulish', sans-serif;
+/* fonts import -END */
+
+
+
+
+
+
+/* reset, root */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: 'Mulish', sans-serif;
+}
+
+:root {
+    --clr-black: #152C1A;
+    --clr-dark: #1A251C;
+    --clr-chablis: #FFE9DC;
+    --clr-green: #4F9646;
+    --clr-green-light: #E2F8E0;
+    --clr-gray: #4E5C51;
+    --clr-gray-light: #919D94;
+    --clr-orange: #FF9457;
+    --clr-red: #FF4848;
+    --clr-pink: #FF8787;
+    --clr-theme: #F5F8F5;
+    --clr-gray-deep: #758278;
+
+}
+
+
+
+
+
+
+
+/* portfolio */
+.portfolio {
+    background-image: url(../img/circle-shap.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 100px center;
+
+    .portfolio-grid {
+        .grid-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+            >img {
+                border-radius: 16px;
+                width: 100%;
+            }
+
+            >.grid-item-overlay {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to top, #003033 0%, rgba(0, 48, 51, 0) 100%);
+                opacity: 0;
+                transition: all 0.3s linear;
+            }
+
+            &:hover {
+                >.grid-item-overlay {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .filter-buttons {
+        border-bottom: 2px solid #E2F8E0;
+
+        .btn {
+            &:hover {
+                color: var(--clr-green);
+            }
+        }
+    }
+
+    .btn-filter {
+        color: var(--clr-green);
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -3px;
+            border-bottom: 2px solid var(--clr-green);
+            width: 100%;
+        }
+
+        .total-item {
+            display: inline-block !important;
+        }
+    }
+}
+
+/* portfolio - END*/
+
